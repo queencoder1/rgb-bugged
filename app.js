@@ -134,7 +134,8 @@ resetButton.addEventListener("click", function(){
 /* change the colors of all the squares */ 
 function changeColors(color){
 	//loop through all squares
-	for(var i = 1; i < squares.length; i++){
+	/// Bug 3 For loop should start at 0; Updated to 0///
+	for(var i = 0; i < squares.length; i++){
 		//change each color to match given color
 		squares[i].style.background = color;
 	}
