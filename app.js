@@ -59,7 +59,8 @@ function setupSquares(){
 			//grab color of clicked square
 			var clickedColor = this.style.background;
 			//compare color to pickedColor
-			if(clickedColor = pickedColor){ 
+			//// Bug 2 When comparing color to clicked color it is using the Assignment Operator = which is to assign a value to a variable; It needs a comparison operator ===///
+			if(clickedColor === pickedColor){ 
 				updateColorName();
 				messageDisplay.textContent = "Correct!";
 				resetButton.textContent = "Play Again?"
