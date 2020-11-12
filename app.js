@@ -32,7 +32,7 @@ function init(){
 		scoreDisplay.textContent = score;
 	}
 	else {
-		localStorage.setItem('score', score); 
+		localStorage.setItem('score', +score); 
 	}
 	reset();
 }
@@ -71,13 +71,14 @@ function setupSquares(){
 					resetPressed = false;
 				}
 				scoreDisplay.textContent = score;
-				localStorage.setItem('score', score);
+				/// Bug 4: Updated localStorage to reflect converting an argument to a number; I updated this on all localStorage argumemnts///
+				localStorage.setItem('score', +score);
 			} else {
 				this.style.background = "#232323";
 				messageDisplay.textContent = "Try Again"
 				score--;
 				scoreDisplay.textContent = score; 
-				localStorage.setItem('score', score);
+				localStorage.setItem('score', +score);
 			}
 		} );
 	}
