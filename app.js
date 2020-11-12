@@ -27,7 +27,8 @@ function init(){
 	setupSquares();
 	var lsScore = localStorage.getItem('score');
 	if( lsScore !== null ){
-		score = lsScore; 
+		//    Bug 1: lsScore returns string and it needed to be converted to a Number.  I used the Number method//
+		score = Number(lsScore); 
 		scoreDisplay.textContent = score;
 	}
 	else {
