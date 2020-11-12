@@ -31,6 +31,7 @@ function init(){
 		score = Number(lsScore); 
 		scoreDisplay.textContent = score;
 	}
+	/// Bug 4: Updated localStorage to reflect converting an argument to a number; I updated this on all localStorage argumemnts///
 	else {
 		localStorage.setItem('score', +score); 
 	}
@@ -74,6 +75,7 @@ function setupSquares(){
 				/// Bug 4: Updated localStorage to reflect converting an argument to a number; I updated this on all localStorage argumemnts///
 				localStorage.setItem('score', +score);
 			} else {
+				this.style.pointerEvents = "none"
 				this.style.background = "#232323";
 				messageDisplay.textContent = "Try Again"
 				score--;
